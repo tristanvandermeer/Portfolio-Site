@@ -1,0 +1,15 @@
+:root {
+    --text-color: black;
+    --link-color: blueviolet;
+    --background-color: whitesmoke;
+}
+
+* {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
