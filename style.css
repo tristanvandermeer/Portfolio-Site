@@ -118,3 +118,10 @@ a {
     }
 
 }
+
+.main-photo {
+    width: 24rem;
+    height: 32rem;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.3),
+    -10px -10px 10px white;  
+}
