@@ -28,29 +28,41 @@ a {
     color: var(--link-color)
 }
 
-nav {
-    padding: 12px;
-    min-height: 72px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
     -10px -10px 10px white;    
 
 }
 
-main {
-    margin: 0px;
+.myname {
+    font-size: 1.3rem;
+    margin: 0.5rem;
 }
 
-.navbar a {
-    padding: 12px;
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: var(--link-color);
+    padding: 1rem;
+    display: block;
     box-shadow: none; 
     transition: box-shadow 0.1s ease-in-out; 
 }
 
-.navbar a:hover {
-    padding: 12px;
+.navbar-links li:hover {
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
     -10px -10px 10px white;    
     transition: box-shadow 0.1s ease-in-out;
 }
-
-
