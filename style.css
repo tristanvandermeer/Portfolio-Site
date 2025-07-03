@@ -1,7 +1,10 @@
 /* NEW CSS*/
 
 navbar {
+    border-style: dotted;
     display: flex;
+    justify-content: space-between;
+    align-items: center; /* Unecessary, its just in Ver1*/
 }
 
 .navbar-links ul{
@@ -9,3 +12,4 @@ navbar {
     padding: 0;
     display: flex; 
 }
+
