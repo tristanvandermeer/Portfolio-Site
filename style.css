@@ -1,15 +1,39 @@
 /* NEW CSS*/
 
-navbar {
-    border-style: dotted;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Unecessary, its just in Ver1*/
+
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.05fr 2fr 4fr 1fr;
 }
 
-.navbar-links ul{
-    margin: 0;
-    padding: 0;
-    display: flex; 
+.main-text {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
 }
 
+div {
+    border-style: solid;
+}
+
+.navbar {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+}
+
+.centre-area {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.whole-area {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
