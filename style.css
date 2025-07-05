@@ -1,39 +1,58 @@
 /* NEW CSS*/
 
-
+@font-face {
+    font-family: Console;
+    src: url(Web437_IBM_VGA_8x16.woff);
+}
 
 body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 0.05fr 2fr 4fr 1fr;
+    /*background-color: #212227;*/
+    background-image: linear-gradient(#212227, #292b31);
 }
 
-.main-text {
+.nav-text {
     grid-column-start: 2;
     grid-row-start: 1;
     text-align: center;
+    color: whitesmoke;
 }
 
 div {
     border-style: solid;
+    border-width: 0.2px;
+    border-color: #EEE5E9;
 }
 
 .navbar {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
+    background-color: #CF5C36;
+    font-family: url(Web437_IBM_VGA_8x16.woff);
 }
 
 .centre-area {
     grid-column-start: 2;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 4;
+    background-color: ;
 }
 
 .whole-area {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 5;
 }
+
+/*
+
+#212227 - grey/black
+#CF5C36 - orange
+#EEE5E9 - whiteish
+
+*/
