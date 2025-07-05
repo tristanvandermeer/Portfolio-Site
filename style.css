@@ -1,7 +1,7 @@
-/* FONTS DONT WORK YET PLEASE FIX*/
+/* FONTS WORK NOW*/
 
 @font-face {
-    font-family: Console;
+    font-family: "Console";
     src: url(Web437_IBM_VGA_8x16.woff);
 }
 
@@ -32,7 +32,7 @@ div {
     grid-column-end: 4;
     grid-row-start: 1;
     background-color: #CF5C36;
-    font-family: url(Web437_IBM_VGA_8x16.woff);
+    font-family: "Console";
 }
 
 .centre-area {
