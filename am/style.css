@@ -1,0 +1,164 @@
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+}
+
+.frame-outer {
+    padding: 20px;
+    background: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+    0 0 50px rgba(0, 0, 0, 0.4);
+
+}
+
+.frame-inner {
+    aspect-ratio: 2 / 3;
+    width: 60vmin;
+    background: #eeece1; /* This is the Sandgrain colour */
+    display: grid;
+    grid-template-columns: 3vmin repeat(5, 1fr) 3vmin;
+    grid-template-rows: 3vmin repeat(9, 1fr) 5vmin;
+}
+
+@font-face {
+    font-family: Helvetica-Bold;
+    src: url(Helvetica-Bold.ttf);
+}
+
+.logo {
+    grid-column: 2;
+    grid-row: 2;
+
+    height: 5vw;
+
+    align-self: start;
+    margin: 0;
+}
+
+.color-bar {
+    grid-column: 6;
+    grid-row: 2;
+
+    /* More grids!!! I love grids!!! */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.bar-color-left {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: black;
+}
+
+.bar-color-mid {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #ab6862;
+}
+
+.bar-color-right {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: rgb(144, 17, 17);
+}
+
+
+.author-mention {
+    grid-column: 6;
+    grid-row: 4;
+
+    color: rgb(144, 17, 17);
+
+    font-size: clamp(0rem, 1.8vw, 1.4rem);
+
+    align-self: end;
+    text-align: right;
+}
+
+.title {
+    font-size: clamp(1rem, 5vw, 4.2rem);
+    margin: 0;
+    
+    grid-column: 2 / span 4;
+    grid-row: 3 / span 2;
+}
+
+/* Waiter! Waiter! More grids please! */
+
+.main-image {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+
+    grid-column: 2 / span 5;
+    grid-row: 5 / span 6;
+    background: #dfddd0;
+}
+
+.am_pillar {
+    grid-row-start: 1;
+    grid-row-end: 10;
+    grid-column: 5;
+    justify-self: center;
+    align-self: end;
+
+    width: 900%;
+}
+
+.background-color {
+    background-color: rgb(144, 17, 17);
+    grid-row: 7 / 10;
+    grid-column: 1 / 10;
+}
+
+.color2 {
+    grid-row: 6;
+    grid-column: 1 / span 9;
+
+    background-color: #9e3733;
+    border-style: solid;
+    border-color: #9e3733;
+}
+
+.color3 {
+    grid-row: 5;
+    grid-column: 1 / span 9;
+
+    background-color: #ab6862;
+    border-style: solid;
+    border-color: #ab6862;
+}
+
+/* Bottom row formatting */
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / span 5;
+  grid-row: 11;
+}
+
+.left-group, .right-group {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ ul li {
+    line-height: 1;
+ }
