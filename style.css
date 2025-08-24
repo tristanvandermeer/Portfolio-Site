@@ -1,58 +1,35 @@
-/* FONTS WORK NOW*/
-
-@font-face {
-    font-family: "Console";
-    src: url(Web437_IBM_VGA_8x16.woff);
+* {
+    margin: 0;
 }
 
-body {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0.05fr 2fr 4fr 1fr;
-    /*background-color: #212227;*/
-    background-image: linear-gradient(#212227, #292b31);
+:root {
+    --bg: #0A1128;
+    --accent: #8000D4;
+    --light-accent: #CCDBDC;
 }
 
-.nav-text {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    text-align: center;
-    color: whitesmoke;
+.container {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
 }
 
-div {
-    border-style: solid;
-    border-width: 0.2px;
-    border-color: #EEE5E9;
+.name {
+    border: 2px solid black;
 }
 
-.navbar {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    background-color: #CF5C36;
-    font-family: "Console";
+nav  {
+    display: flex;
+    justify-content: space-between;
+
+    border: 2px solid black;
+
+    width: 60vw;
+    height: auto;
 }
 
-.centre-area {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    background-color: ;
+.site-name {
+    font-size: 30px;
 }
-
-.whole-area {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 5;
-}
-
-/*
-
-#212227 - grey/black
-#CF5C36 - orange
-#EEE5E9 - whiteish
-
-*/
