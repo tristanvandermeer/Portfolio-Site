@@ -87,6 +87,7 @@
 .title {
     font-size: 5.2vmin;
     margin: 0;
+    padding-bottom: 1vmin;
     
     grid-column: 2 / span 4;
     grid-row: 3 / span 2;
