@@ -26,8 +26,22 @@ function waveField(nx, ny, time) {
 
 const SCALE = 0.4; // render at lower res
 
+let maskData = null;
 let imageData = null;
 let buf = null;
+let speed = 0.0005;
+let frameCount = 0
+
+const maskImg = new Image();
+maskImg.src = '/assets/FinalLogoLarge.png'
+maskImg.onload = () => {
+    const offscreen = document.createElement('canvas');
+    offscreen.width = maskImg.width;
+    offscreen.height = maskImg.height;
+    const offContext = offscreen.getContext('2d');
+    offContext.drawImage(maskImg, 0, 0);
+    maskData = offContext.getImageData(0, 0, offscreen.width, offscreen.height);
+};
 
 function resize() {
     canvas.width  = Math.floor(wrap.clientWidth * SCALE);
@@ -38,9 +52,13 @@ function resize() {
     buf = new Uint32Array(imageData.data.buffer); // keep in sync
 }
 
-let speed = 0.0005;
-let frameCount = 0
-
+function getMaskBrightness(nx, ny) {
+    if (!maskData) return 0;
+    const px = Math.floor(nx * (maskData.width - 1));
+    const py = Math.floor(ny * (maskData.height - 1));
+    const i = (py * maskData.width + px) * 4;
+    return 1 - (maskData.data[i + 3] / 255); // 0 = transparent, 1 = opaque
+}
 
 function render(timestamp) {
     frameCount++;
@@ -59,9 +77,10 @@ function render(timestamp) {
         const row = bayer4[y % 4];
 
         for (let x = 0; x < W; x++) {
+            
             const nx = x / (W - 1);
 
-            const brightness = waveField(nx, ny, t);
+            const brightness = Math.max(0, Math.min(1, waveField(nx, ny, t) - (1 - getMaskBrightness(nx, ny)) * 0.3));
 
             const threshold = row[x % 4];
             const idx = brightness > threshold
