@@ -18,13 +18,13 @@ function waveField(nx, ny, time) {
     let v = 0;
     v += 0.25 * (0.5 + 0.5 * Math.cos(ny * 4.8 - time * 0.5));
     v += 0.3 * (0.5 + 0.5 * Math.cos(nx * 3.2 + time * 0.65));
-    //v += 0.2 * (0.5 + 0.5 * Math.sin((nx + ny) * 7.5 + time * 0.9));
+    //v -= 0.2 * (0.5 + 0.5 * Math.sin((nx + ny) * 7.5 + time * 0.9));
     
     v += 0.1 * (0.5 + 0.5 * Math.sin(Math.sqrt((nx-0.5)**2 + (ny-0.5)**2) * 11 - time * 1.1));
     return Math.max(0, Math.min(1, v)); // clamp
 }   
 
-const SCALE = 0.4; // render at lower res
+const SCALE = 0.39; // render at lower res
 
 let maskData = null;
 let imageData = null;
